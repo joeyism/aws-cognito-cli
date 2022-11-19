@@ -3,6 +3,7 @@ include CONTRIBUTING.rst
 include HISTORY.rst
 include LICENSE
 include README.rst
+include aws_cognito_cli/VERSION
 
 recursive-include tests *
 recursive-exclude * __pycache__
