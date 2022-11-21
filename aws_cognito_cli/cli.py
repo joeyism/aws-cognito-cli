@@ -17,7 +17,7 @@ def main():
         password=args.password,
         pool_id=args.pool_id,
         client_id=args.client_id
-    ))
+    ), end="")
     return 0
 
 
