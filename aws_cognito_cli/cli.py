@@ -11,12 +11,14 @@ def main():
     parser.add_argument('-p', '--password', help="Password", required=True)
     parser.add_argument('--pool-id', help="Pool ID", required=True)
     parser.add_argument('--client-id', help="Client ID", required=True)
+    parser.add_argument('--region', help="Region", required=False, default=None)
     args = parser.parse_args()
     print(aws_cognito_cli.get_access_token(
         username=args.username,
         password=args.password,
         pool_id=args.pool_id,
-        client_id=args.client_id
+        client_id=args.client_id,
+        pool_region=args.region
     ), end="")
     return 0
 
